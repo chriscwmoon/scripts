@@ -1,0 +1,7 @@
+declare -a nodes=(
+os-test-{1..5}.vpc.cloudera.com
+)
+for i in ${nodes[@]}
+do
+    scp $1 $i:$1
+done
